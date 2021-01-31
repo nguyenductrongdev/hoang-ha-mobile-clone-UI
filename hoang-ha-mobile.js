@@ -51,6 +51,10 @@ function sliderTo(signal) {
   sliderImages[nextIndex].style.left = "100%";
 }
 
+setInterval(() => {
+  sliderTo(-1);
+}, 3000);
+
 sliderBtnNext.addEventListener("click", function (event) {
   event.preventDefault();
   sliderTo(1);
