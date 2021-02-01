@@ -1,4 +1,4 @@
-const sliderBtnPreviouss = document.querySelector(
+const sliderBtnPrevious = document.querySelector(
   ".slider .slider__btn-previous"
 );
 const sliderBtnNext = document.querySelector(".slider .slider__btn-next");
@@ -6,8 +6,6 @@ let sliderImages = document.querySelectorAll(".slider .slider__image");
 let currIndex = 0;
 let preIndex = currIndex - 1 < 0 ? sliderImages.length - 1 : currIndex - 1;
 let nextIndex = currIndex + 1 > sliderImages.length - 1 ? 0 : currIndex + 1;
-
-// console.log(preIndex, currIndex, nextIndex);
 
 sliderImages[preIndex].style.left = "-100%";
 sliderImages[nextIndex].style.left = "100%";
@@ -51,16 +49,16 @@ function sliderTo(signal) {
   sliderImages[nextIndex].style.left = "100%";
 }
 
-setInterval(() => {
+let sliderInterval = setInterval(() => {
   sliderTo(-1);
-}, 3000);
+}, 5000);
 
 sliderBtnNext.addEventListener("click", function (event) {
   event.preventDefault();
   sliderTo(1);
 });
 
-sliderBtnPreviouss.addEventListener("click", function (event) {
+sliderBtnPrevious.addEventListener("click", function (event) {
   event.preventDefault();
   sliderTo(-1);
 });
