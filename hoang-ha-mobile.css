@@ -34,6 +34,10 @@
 }
 
 /* Define unities */
+.m-1 {
+  margin: 1vw;
+}
+
 .mb-1 {
   margin-bottom: 1vw;
 }
@@ -60,6 +64,10 @@
 
 .text-black {
   color: black;
+}
+
+.text-orange {
+  color: orange;
 }
 
 .text-uppercase {
@@ -92,6 +100,14 @@
 
 .w-50 {
   width: 50%;
+}
+
+.badge-warning {
+  background: var(--orange);
+  color: white;
+  display: inline-block;
+  padding: 0.5vw;
+  border-radius: var(--border-radius-sm);
 }
 
 @media (min-width: 768px) {
@@ -402,4 +418,84 @@ ul.product-nav > li > a > span {
   border-radius: 0.5vw;
   font-size: large;
   font-weight: bold;
+}
+
+/* syle for product-zone */
+
+.product-zone {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-zone .product-zone__title {
+  background: darkcyan;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  padding: 1vw;
+}
+
+.product-zone .product-zone__body {
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* background: #222; */
+}
+
+.product-zone .product-zone__body .product-zone__body__product {
+  background: white;
+  box-shadow: 0 0 10px black;
+  margin: 1vw;
+  padding: 1vw;
+  width: calc((100% - 2vw * 5) / 5.0729);
+  color: black;
+  height: 30vw;
+  overflow: hidden;
+}
+
+.product-zone .product-zone__body__product__image {
+  width: 100%;
+  height: 40%;
+  object-fit: contain;
+  /* background-color: lightblue; */
+}
+
+.product-zone .product-zone__body__product__name {
+  width: 100%;
+  height: 30%;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  font-size: 1.2rem;
+  /* background: gold; */
+}
+
+.product-zone .product-zone__body__product__cost {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  /* background: green; */
+}
+
+.product-zone .product-zone__body__product__cost__disconted {
+  font-weight: bold;
+  text-align: center;
+  flex: 50%;
+  color: tomato;
+}
+
+.product-zone .product-zone__body__product__cost__orgigin {
+  flex: 50%;
+  text-align: center;
+  text-decoration: line-through;
+  font-weight: lighter;
+  color: black;
+}
+
+.product-zone .product-zone__body__product__ads {
+  /* height: 10%; */
+  color: black;
+  /* background: red; */
+  overflow: auto;
 }
